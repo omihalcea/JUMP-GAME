@@ -8,4 +8,6 @@ func _ready() -> void:
 
 
 func _on_button_pressed() -> void:
+	GameManager.puntos = 0
+	GameManager.refrescar_puntos()
 	get_tree().change_scene_to_file("res://Escenas/Menus/selector_niveles.tscn")
