@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://piw1jkk3yuxg"]
+
+[ext_resource type="Texture2D" uid="uid://cctwscrf12c7j" path="res://Assets/Captura de pantalla 2023-07-29 175410.png" id="1_d6lg4"]
+[ext_resource type="Script" path="res://Scripts/Camera2D.gd" id="2_cpc2u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bvl5a"]
+size = Vector2(540, 238)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("2_cpc2u")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_d6lg4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_bvl5a")

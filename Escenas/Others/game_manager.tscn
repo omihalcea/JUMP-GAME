@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cuwn0hv5lwhv3"]
+
+[ext_resource type="Script" path="res://Escenas/Others/GameManager.gd" id="1_00xlj"]
+
+[node name="GameManager" type="Node" node_paths=PackedStringArray("corazones")]
+script = ExtResource("1_00xlj")
+corazones = [null, null, null]

@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=3 uid="uid://qckmcry0knn8"]
+
+[ext_resource type="Script" path="res://Escenas/Menus/selector_niveles.gd" id="1_pfu3m"]
+[ext_resource type="Texture2D" uid="uid://c8tm2siehy5ec" path="res://Assets/Background/Brown.png" id="1_yjguy"]
+[ext_resource type="Texture2D" uid="uid://bm67vxd3tqonm" path="res://Assets/coollogo_com-18309293.png" id="2_arsqg"]
+
+[node name="SelectorNiveles" type="Node"]
+script = ExtResource("1_pfu3m")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_yjguy")
+stretch_mode = 1
+
+[node name="Titulo" type="TextureRect" parent="."]
+texture_filter = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -285.0
+offset_top = -140.0
+offset_right = 285.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_arsqg")
+
+[node name="Nivel_1" type="Button" parent="."]
+offset_left = 275.0
+offset_top = 372.0
+offset_right = 554.0
+offset_bottom = 462.0
+theme_override_font_sizes/font_size = 30
+text = "Nivel 1"
+
+[node name="Nivel_2" type="Button" parent="."]
+offset_left = 586.0
+offset_top = 372.0
+offset_right = 865.0
+offset_bottom = 462.0
+theme_override_font_sizes/font_size = 30
+text = "Nivel 2"
+
+[connection signal="pressed" from="Nivel_1" to="." method="_on_nivel_1_pressed"]
+[connection signal="pressed" from="Nivel_2" to="." method="_on_nivel_2_pressed"]

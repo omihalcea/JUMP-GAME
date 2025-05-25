@@ -1,0 +1,65 @@
+[gd_scene load_steps=4 format=3 uid="uid://dyigl7fevuvxq"]
+
+[ext_resource type="Script" path="res://Escenas/Menus/final.gd" id="1_7a4fa"]
+[ext_resource type="Texture2D" uid="uid://bvpxu1sw55qwl" path="res://Assets/Background/Green.png" id="1_og888"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_c6l83"]
+font_size = 50
+font_color = Color(0, 0, 0, 1)
+outline_size = 8
+shadow_size = 13
+
+[node name="Final" type="Node"]
+script = ExtResource("1_7a4fa")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_og888")
+stretch_mode = 1
+
+[node name="Fin del Juego" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -174.0
+offset_top = -69.0
+offset_right = 174.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Final del juego"
+label_settings = SubResource("LabelSettings_c6l83")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 402.0
+offset_top = 403.0
+offset_right = 732.0
+offset_bottom = 489.0
+theme_override_font_sizes/font_size = 30
+text = "Volver al inicio"
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 457.0
+offset_top = 83.0
+offset_right = 678.0
+offset_bottom = 161.0
+metadata/_edit_group_ = true
+
+[node name="PointsLabel" type="Label" parent="Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.005
+anchor_bottom = 1.0
+offset_right = -0.104996
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 30
+text = "Puntos: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
